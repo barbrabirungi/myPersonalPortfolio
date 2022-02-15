@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root {
+    --color: rgb(121, 250, 16);
+}
+
+* {
+    font-size: 1cm;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(6, 3, 34);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: none;
+    transition: all .2s linear;
+}
+*::selection {
+    background: green;
+    color: rgb(134, 210, 233);
+}
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0.2cm;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+@keyframes resize-anime {
+from {
+  font-size: 20px;
+  font-weight: 100;
+  opacity:0
+} 
+to {
+  font-size: 40px;
+  font-weight: 500;
+  text-shadow: 0px 0px 5px black;
+  opacity: none;
+}
+}
+
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+    width: 0.3cm;
+}
+html::-webkit-scrollbar-track {
+    background: rgb(177, 183, 184);
+}
+html::-webkit-scrollbar-thumb {
+    background: rgba(53, 47, 78, 0.575);
+}
+body {
+    background: rgba(53, 47, 78, 0.575);
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+section {
+    min-height: 100vh;
+    padding: 1rem;
+}
+.btn {
+    padding: .7rem 3rem;
+    background: rgb(54, 60, 63);
+    color: rgb(213, 230, 230);
+    cursor: pointer;
+    margin-top: 1cm;
+    margin-left: 1cm;
+    font-size: 0.5cm;
+    border-radius: 5rem;
+    
+}
+.btn i {
+    padding: 0.1cm;
+    font-size: 0.6cm;
+    
+}
+.btn:hover {
+    background: green;
+    transform: translate(100%);
+   
+}
+.heading {
+    text-align: center;
+    margin: 0 6rem;
+    text-transform: uppercase;
+    font-size: 40px;
+    padding: 1rem;
+    border-bottom: .1rem solid green;
+    color: rgb(222, 234, 236);
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    top:-0.14em;
+    left: 10px;
+    animation: resize-anime 5s infinite;
+    animation-direction: alternate;
+}  
+    
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #eccebc;
+    --color-2: #b1d6e6;
+    --color-3: #E4A9A8;
+    --color-4: #9cd1a9;
+  }
+  
+  .title-word-2 {
+    --color-1: #d3ca98;
+    --color-2: #94cf94;
+    --color-3: #ca98cc;
+    --color-4: #92ca97;
+  }
+  
+  .title-word-3 {
+    --color-1: #35e71d;
+    --color-2: #3010bd;
+    --color-3: #cc0c09;
+    --color-4: #0cc93b;
+  }
+  
+  .title-word-4 {
+    --color-1: #b353df;
+    --color-2: #ae943d;
+    --color-3: #e4dba8;
+    --color-4: #65add6;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    12%   {color: var(--color-1)}
+    23%   {color: var(--color-2)}
+    35%   {color: var(--color-2)}
+    56%   {color: var(--color-3)}
+    60%   {color: var(--color-3)}
+    79%   {color: var(--color-4)}
+    92%   {color: var(--color-4)}
+    100%  {color: var(--color-1)}
+  }
+  
+  
+.container {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    height: 100vh
+}
+  
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8.5vw;
+    text-transform: uppercase;
+}
+.heading span {
+    color: var(--color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@keyframes example {
+    from {background: rgba(53, 47, 78, 0.575);}
+    to {background-color: rgba(4, 1, 17, 0.645);}
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: rgba(53, 47, 78, 0.575);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes zoomin {
+    from {}
+    to{transform: scale(1.8);}
+}
+
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.1cm solid rgb(0, 195, 255);
+}
+.prof:hover {
+    animation-name: zoomin;
+    animation-duration: 3s;
+}
+
+header .user .name {
+    font-size: 1cm;
+    color: rgb(229, 239, 241);
+}
+header .user .post {
+    font-size: 0.5cm;
+    color: rgba(229, 239, 241, 0.829);
+}
+header .navbar {
+    width: 100%;
+}
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+}
+header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: rgb(54, 60, 63);
+    color: rgb(213, 230, 230);
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+header .navbar ul li a:hover {
+    background: green;
+}
+
+#menu {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: rgb(54, 60, 63);
+    color: rgb(213, 230, 230);
+    cursor: pointer;
+    font-size: 0.5cm;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+    
+}
+
+
+/* Home Section*/
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    100% { border-color: rgb(216, 215, 215); }
+  }
+
+
+.home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+    border-radius: 70%;
+    border-color: white;
+    overflow: hidden;
+    
+}
+
+.home h3 {
+    text-align: center;
+    font-stretch: wider;
+    letter-spacing: 0.1cm;
+    font-size: 1.2cm;
+    color: rgb(182, 182, 182);
+ 
+}
+.home h1 {
+    font-size: 0.9cm;
+    color: rgb(216, 215, 215);
+    overflow: hidden; 
+    border-right: .15em solid rgb(216, 215, 215);
+    white-space: nowrap;
+    margin: 0 auto; 
+    letter-spacing: .15em;
+    animation: 
+      typing 5.5s steps(30, end),
+      blink-caret .75s step-end;
+}
+.home h1 span {
+    color: var(--color);
+}
+.home p {
+    font-size: 2rem;
+    line-height: 2cm;
+    color: rgb(182, 182, 182);
+    padding: 0.1cm 0;
+    border-right: 0.1cm solid rgba(12, 3, 49, 0.933);
+    white-space: nowrap;
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    overflow: hidden;
+    animation:
+      typing 6.5s steps(60, end),
+      blink-caret .75s step-end;
+      animation-delay: 7s;
+            
+}
+
+
+/* About Section*/
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    background-color: gray;
+}
+.about .row .info {
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+.about .row .info h3 {
+    font-size: 0.7cm;
+    color: var(--color);
+    font-weight: bold;
+    padding: 1rem 0;
+    
+}
+.about .row .info h3 span {
+    color: rgb(182, 182, 182);
+    padding: 0 .5rem;
+    font-family: monospace;
+ }
+.about .row .counter {
+    flex: 1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: grey;
+}
+.about .row .counter .box {
+    width: 20rem;
+    background: rgb(54, 60, 63);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+.about .row .counter .box span {
+    font-size: 4rem;
+    color: var(--color);
+}
+.about .row .counter .box h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+#social {
+    letter-spacing: 0.2cm;
+    background: rgb(54, 60, 63);
+
+}
+
+/* About Section Ends */
+
+/* Education Section Starts */
+
+.education .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: grey;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+.education .box-container .box {
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #222;
+    position: relative;
+}
+.education .box-container .box span {
+    font-size: 1.3rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+.education .box-container .box h3 {
+    font-size: 2rem;
+    color: rgb(182, 182, 182);
+    padding-top: 1.5rem;
+}
+.education .box-container .box p {
+    font-size: 1.4rem;
+    color: rgb(182, 182, 182);
+    padding: 1rem 0;
+}
+.education .box-container .box i {
+    position: absolute;
+    top: -1.5rem;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    background: var(--color);
+}
+
+/* Education Section Ends */
+
+/* Portfolio Section Starts */
+
+.portfolio .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    background-color: grey;
+}
+.portfolio .box-container .box {
+    height: 20rem;
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+.portfolio .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.portfolio .box-container .box:hover img {
+    transform: scale(1.2);
+}
+
+/* Portfolio Section Ends */
+
+/* Contact Section Starts */
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: grey;
+}
+.contact .row .content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+.contact .row form .box {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #3333;
+    color: rgb(182, 182, 182);
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+}
+#genderr {
+    padding: 1.5rem;
+    list-style: none;
+    background: #3333;
+    color: rgb(182, 182, 182);
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 70%;
+}
+
+.contact .row form .box::placeholder {
+    text-transform: capitalize;
+}
+.contact .row form .message {
+    height: 15rem;
+    resize: none;
+}
+.contact .row .content .title {
+    text-transform: uppercase;
+    color: rgb(182, 182, 182);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.contact .row .content .info h3 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    text-transform: none;
+    color: rgb(182, 182, 182);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.contact .row .content .info h3 i {
+    padding-right: 1rem;
+    color: var(--color);
+}
+
+/* Contact Section Ends */
+
+
+/* Media Queries */
+
+ @media (max-width:1200px) {
+     html {
+         font-size: 55%;
+     }
+     .home {
+         padding: 1rem 4rem;
+     }
+ }
+ @media (max-width:991px) {
+     header {
+         left: -120%;
+     }
+     #menu {
+         display: block;
+     }
+     header.toggle {
+         left: 0%;
+     }
+     body {
+         padding: 0;
+     }
+ }
+ @media (max-width:768px) {
+     html {
+         font-size: 50%;
+     }
+ }
+@media (max-width:400px) {
+    header {
+        width: 100vw;
+    }
+    .heading {
+        margin: 0 3rem;
+    }
+    .about .row .counter .box {
+        width: 100%;
+    }
+    .education .box-container .box {
+        width: 100%;
+    }
+    .portfolio .box-container .box {
+        width: 100%;
+    }
+    .contact .row form {
+        margin: 3rem 0;
+    }
+}
